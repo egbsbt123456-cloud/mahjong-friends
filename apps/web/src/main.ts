@@ -1,0 +1,7 @@
+import {createApp} from 'vue';
+import {createRouter,createWebHistory} from 'vue-router';
+import App from './App.vue';
+import Mahjong from './pages/MahjongPlay.vue';
+import './style.css';
+const router=createRouter({history:createWebHistory(),routes:[{path:'/',component:Mahjong},{path:'/games/mahjong-gd',component:Mahjong},{path:'/:pathMatch(.*)*',redirect:'/'}]});
+createApp(App).use(router).mount('#app');

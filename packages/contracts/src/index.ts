@@ -1,0 +1,2 @@
+// 麻将（广东麻将）房间视图。game 为引擎 view() 的结果（自己视角），结构见 packages/game-core/src/mahjong-gd-engine.cjs
+export interface MahjongRoomView {code:string;hostSeat:number;status:'waiting'|'playing'|'cancelled';version:number;serverNow:number;yourSeat:number;handNo:number;dealer:number|null;settings:Record<string,any>;seats:{seat:number;name:string;ready:boolean;online:boolean;hosted:boolean}[];game:Record<string,any>|null;updatedAt:number}
